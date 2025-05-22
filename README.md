@@ -5,7 +5,7 @@ Addhay debnath_63[ID: 0182410012101081]
 #define SIZE 100
 
 int arr[SIZE];
-int n = 0; // Current size of the array
+int n = 0; 
 
 void insert() {
     int count, value;
@@ -63,7 +63,6 @@ void display() {
 }
 
 void sort(int order) {
-    // order = 1 for ascending, 0 for descending
     for (int i = 0; i < n - 1; i++) {
         for (int j = i + 1; j < n; j++) {
             if ((order && arr[i] > arr[j]) || (!order && arr[i] < arr[j])) {
@@ -73,7 +72,7 @@ void sort(int order) {
             }
         }
     }
-    printf(order ? "Sorted in Ascending order.\n" : "Sorted in Descending order.\n");
+    printf( "Sorted in Ascending order.\n" : "Sorted in Descending order.\n");
 }
 
 void search() {
@@ -99,10 +98,14 @@ int main() {
         printf("Enter your choice: ");
         scanf("%d", &choice);
         switch (choice) {
-            case 1: insert(); break;
-            case 2: update(); break;
-            case 3: delete(); break;
-            case 4: display(); break;
+            case 1: insert(); 
+            break;
+            case 2: update(); 
+            break;
+            case 3: delete(); 
+            break;
+            case 4: display(); 
+            break;
             case 5: {
                 int order;
                 printf("1 for Ascending, 0 for Descending: ");
@@ -110,9 +113,12 @@ int main() {
                 sort(order);
                 break;
             }
-            case 6: search(); break;
-            case 0: printf("Exiting...\n"); break;
-            default: printf("Invalid choice!\n");
+            case 6: search();
+            break;
+            case 0: printf("Exiting...\n"); 
+            break;
+            default: 
+            printf("Invalid choice!\n");
         }
     } while (choice != 0);
     
